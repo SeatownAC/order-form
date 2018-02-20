@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Busmall Order Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="app.js"></script>
+</head>
+<body>
+    <h1>Busmall Product Order Form</h1>
+    <h2 id="subheader">Please select a product that you would like to order.</h2>
+    <form id="order-form">
+        <fieldset>
+            <legend>Add a product</legend>
+            <select name="products">
+                <option value="bag">R2-D2 Rolling Bag</option>
+                <option value="banana">Banana Slicer</option>               
+                <option value="bathroom">Smart TP Holder</option>               
+                <option value="boots">Toeless Boots</option>               
+                <option value="breakfast">3in1 Breakfast Mach.</option>             <option value="bubblegum">Meatball Bubblegum</option>               <option value="chair">Red Chair</option>
+                <option value="cthulhu">Cthulhu</option>
+                <option value="dog-duck">Duck Muzzle</option>
+                <option value="dragon">Dragon Meat</option>
+                <option value="pen">Pen Utensils</option>
+                <option value="pet-sweep">Pet Dust Boots</option>
+                <option value="tauntaun">Tauntaun Sleeping Bag</option>
+                <option value="unicorn">Unicorn Meat</option>
+                <option value="usb">Tentacle USB Drive</option>
+                <option value="water-can">Perpetual Watering Can</option>
+                <option value="wine-glass">Wine Snob Glass</option>
+            </select>
+
+            <label for="qtyNum">Quantity</label>
+            <input name="qtyNum" type="number" required min="1"/>
+            <br>
+            <button id="add-item-button" type="submit">Add to Cart</button>
+        </fieldset>
+    </form>
+    <a href="cart.html">
+        <img src="img/orange-checkout-hi.png" alt="Checkout" style="width:150px;border:0;">
+      </a> 
+</body>
+</html>
