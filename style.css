@@ -1,0 +1,23 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+}
+h2,li,p {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    color: darkblue;
+}
+
+#productarea {
+    width: 80%;
+    height: 500px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: teal;
+    padding: 1%;
+    vertical-align: bottom;
+    display: table-cell;
+}
