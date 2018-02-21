@@ -3,7 +3,7 @@
 
 OrderedItem.itemSelected=[];
 var products=[];
-var quantityOrdered=[];
+// var quantityOrdered=[];
 
 //Constructor Function//
 function OrderedItem(name, filepath, qtyOrdered) {
@@ -15,23 +15,23 @@ function OrderedItem(name, filepath, qtyOrdered) {
 }
 
 //Use my constructor function to create new OrderedItem instances//
-new OrderedItem('bag','images/bag.jpg',0);
-new OrderedItem('banana', 'images/banana.jpg', 0);
-new OrderedItem('bathroom', 'images/bathroom.jpg', 0);
-new OrderedItem('boots', 'images/boots.jpg', 0);
-new OrderedItem('breakfast', 'images/breakfast.jpg', 0);
-new OrderedItem('bubblegum', 'images/bubblegum.jpg', 0);
-new OrderedItem('chair', 'images/chair.jpg',0 );
-new OrderedItem('cthulhu', 'images/cthulhu.jpg', 0);
-new OrderedItem('dog-duck', 'images/dog-duck.jpg', 0);
-new OrderedItem('dragon', 'images/dragon.jpg', 0);
-new OrderedItem('pen', 'images/pen.jpg', 0);
-new OrderedItem('pet-sweep', 'images/pet-sweep.jpg', 0);
-new OrderedItem('tauntaun', 'images/tauntaun.jpg', 0);
-new OrderedItem('unicorn', 'images/unicorn.jpg', 0);
-new OrderedItem('usb', 'images/usb.gif', 0);
-new OrderedItem('water-can', 'images/water-can.jpg', 0);
-new OrderedItem('wine-glass', 'images/wine-glass.jpg',0);
+new OrderedItem('bag','bag.jpg',0);
+new OrderedItem('banana', 'banana.jpg', 0);
+new OrderedItem('bathroom', 'bathroom.jpg', 0);
+new OrderedItem('boots', 'boots.jpg', 0);
+new OrderedItem('breakfast', 'breakfast.jpg', 0);
+new OrderedItem('bubblegum', 'bubblegum.jpg', 0);
+new OrderedItem('chair', 'chair.jpg',0 );
+new OrderedItem('cthulhu', 'cthulhu.jpg', 0);
+new OrderedItem('dog-duck', 'dog-duck.jpg', 0);
+new OrderedItem('dragon', 'dragon.jpg', 0);
+new OrderedItem('pen', 'pen.jpg', 0);
+new OrderedItem('pet-sweep', 'pet-sweep.jpg', 0);
+new OrderedItem('tauntaun', 'tauntaun.jpg', 0);
+new OrderedItem('unicorn', 'unicorn.jpg', 0);
+new OrderedItem('usb', 'usb.gif', 0);
+new OrderedItem('water-can', 'water-can.jpg', 0);
+new OrderedItem('wine-glass', 'wine-glass.jpg',0);
 
 
 
@@ -49,7 +49,7 @@ function addToCart(event) {
     console.log('products ' + products[i].name);
     if (products[i].name === prodName) {
       
-      products[i].quantityOrdered = quantity;
+      products[i].qtyOrdered = quantity;
     }
    
     
@@ -61,7 +61,7 @@ function addToCart(event) {
 
   //Take Checkpoint: Save results to local storage//
   var strProducts = JSON.stringify(products);
-  localStorage.setItem('productsSelected', strProducts);
+  localStorage.setItem('products', strProducts);
 
   //Clear the Form
   event.target.qtyNum.value = null;
