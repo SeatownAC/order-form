@@ -42,16 +42,16 @@ function OrderedItem(name, filepath, qtyOrdered) {
 //   for (var i = 0; i<products.length; i++) {
 //     console.log('products ' + products[i].name);
 //     if (products[i].name === prodName) {
-      
+
 //       products[i].quantityOrdered = quantity;
 //     }
-   
+
 displayCart();
 
-  
+
 //   }
 // }
-  
+
 function displayCart() {
   console.log('Products Array Length: '+products.length);
   for (var i=0; i<products.length; i++) {
@@ -70,6 +70,10 @@ function displayCart() {
       pEl.textContent = products[i].name;
       liEl.appendChild(imgEl);
       liEl.appendChild(pEl);
+
+      var cartList = document.getElementById('cartList');
+      cartList.appendChild(liEl);
+
     }
   }
 }
