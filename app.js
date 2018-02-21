@@ -48,16 +48,16 @@ function addToCart(event) {
   for (var i = 0; i<products.length; i++) {
     console.log('products ' + products[i].name);
     if (products[i].name === prodName) {
-      
+
       products[i].qtyOrdered = quantity;
     }
-   
-    
-  
+
+
+
   }
- 
-  
-  
+
+
+
 
   //Take Checkpoint: Save results to local storage//
   var strProducts = JSON.stringify(products);
@@ -74,3 +74,4 @@ function addToCart(event) {
 var addButton = document.getElementById('order-form');
 console.log('add' + addButton);
 addButton.addEventListener('submit', addToCart);
+

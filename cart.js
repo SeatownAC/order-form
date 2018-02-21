@@ -66,10 +66,9 @@ function displayCart() {
       imgEl.src = 'img/'+products[i].filepath;
       imgEl.alt = products[i].name;
       liEl.appendChild(imgEl);
-      var pEl = document.createElement('p');
-      pEl.textContent = products[i].name;
+
+      liEl.textContent = products[i].name;
       liEl.appendChild(imgEl);
-      liEl.appendChild(pEl);
 
       var cartList = document.getElementById('cartList');
       cartList.appendChild(liEl);
@@ -78,11 +77,9 @@ function displayCart() {
   }
 }
 
-
-
-
-
-// //EVENT LISTENERS//
-// var addButton = document.getElementById('order-form');
-// console.log('add' + addButton);
-// addButton.addEventListener('submit', addToCart);
+//Create listener to clear local storage on command.
+var clearLS = document.getElementById('clearStorage');
+clearLS.addEventListener('click', function() {
+  console.log('Clearing Local Storage');
+  localStorage.clear();
+});
