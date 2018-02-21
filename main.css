@@ -1,0 +1,60 @@
+body {
+    background-color: lightgoldenrodyellow;
+}
+
+h1 {
+    color: mediumblue;
+    background-color: lightblue;
+    text-align: center;
+}
+
+#subheader {
+    text-align: center;
+    font-style: italic;
+}
+
+input[type=text], select, textarea {
+    font-size: 12px;
+    width: 30%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+    
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+.container {
+    border-radius: 50px;
+    background-color: lightgray;
+    padding: 10px;
+    width: 50%;
+    float: right;
+    
+}
+
+label {
+    font-size: 14px;
+}
+
+.cartimage {
+    height: 25%;
+    width: 25%;
+    padding: 20px;
+    
+  
+}
