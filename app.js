@@ -11,7 +11,7 @@ function OrderedItem(name, filepath, qtyOrdered) {
   this.filepath = filepath;
   this.qtyOrdered = qtyOrdered;
 
-  OrderedItem.itemSelected.push(this);
+  products.push(this);
 }
 
 //Use my constructor function to create new OrderedItem instances//
@@ -41,24 +41,36 @@ new OrderedItem('wine-glass', 'images/wine-glass.jpg',0);
 function addToCart(event) {
   event.preventDefault();
   var prodName = event.target.products.value;
-  var quantity = parseInt(event.target.quantity.value);
+  var quantity = parseInt(event.target.qtyNum.value);
+  console.log('prodName ' + prodName);
+  console.log('quantity ' + quantity);
 
-  prodName.products.quantityOrdered = quantity;
-  console.log(prodName.products.quantityOrdered);
+  for (var i = 0; i<products.length; i++) {
+    console.log('products ' + products[i].name);
+    if (products[i].name === prodName) {
+      
+      products[i].quantityOrdered = quantity;
+    }
+   
+    
+  
+  }
+ 
+  
+  
 
   //Take Checkpoint: Save results to local storage//
   var strProducts = JSON.stringify(products);
   localStorage.setItem('productsSelected', strProducts);
 
   //Clear the Form
-  event.target.quantity.value = null;
-  event.target.prodName.value = null;
+  event.target.qtyNum.value = null;
+  event.target.products.value = null;
 
 
 
 }
 //EVENT LISTENERS//
-var add = document.getElementById('add-item-button');
-console.log(add);
-add.addEventListener('submit', addToCart);
-console.log('bsakjfbajksbf' , addToCart);
+var addButton = document.getElementById('order-form');
+console.log('add' + addButton);
+addButton.addEventListener('submit', addToCart);
